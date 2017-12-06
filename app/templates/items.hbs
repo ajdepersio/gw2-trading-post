@@ -1,7 +1,23 @@
-<h2>List of Items</h2>
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome!</h2>
+  <p>We hope this helps you in your quest to save Tyria..</p>
+  {{#link-to 'about' class="button"}}
+    About Us
+  {{/link-to}}
+</div>
 
-<ul>
-    {{#each model as |itemListing|}}
-        <li>{{itemListing}}</li>
-    {{/each}}
-</ul>
+{{#each model as |item|}}
+  <article class="listing">
+    <h3>{{item.name}}</h3>
+    <div class="detail type">
+      <span>Type:</span> {{item.type}}
+    </div>
+    <div class="detail rarity">
+      <span>Rarity:</span> {{item.rarity}}
+    </div>
+    <div class="detail value">
+      <span>Vendor Value:</span> {{item.vendor_value}}
+    </div>
+  </article>
+{{/each}}
