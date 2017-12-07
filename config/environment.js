@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'trading-post',
+    modulePrefix: 'gw2-tools',
     environment,
     rootURL: '/',
     locationType: 'auto',
